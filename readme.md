@@ -48,4 +48,29 @@ Nios II is a widely used 32-bit soft-core processor designed for FPGA applicatio
 
 ---
 
-This document serves as a quick overview of the Nios II processor and its capabilities. For detailed implementation or further reading, refer to the provided Intel resources.
+## Hardcore vs Softcore
+- Softcore: - Implementation defined by VHDL description
+            - Programming of FPGA needed to realize CPU system
+
+- Hardcore: - Implementation defined in silicon
+            - CPU system already present in silicon
+
+
+A soft core processor is a microprocessor fully
+described in software, usually in an HDL, which
+can be synthesized in programmable
+hardware, such as FPGAs
+
+---
+
+## Soft core processor
+
+• Pros:
+  - Include the processor core only when needed
+  - Include only needed features
+  - The number of cores is flexible.
+  - Can reuse the design in newer generations of FPGAs in the future. (Mostly vendor limited)
+
+• Cons:
+  - May be slower and simpler than hard processor cores.
+  - Less area efficient compared to hard cores (Firm IP)
